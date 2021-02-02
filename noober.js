@@ -7,9 +7,15 @@ async function pageLoaded() {
   
   // 🔥 start here: write code to loop through the rides
   
-
-  let outputElement=document.querySelector('.rides')
-
+  let passengerName
+  let passengerPhone
+  let passengerNumberOfPassengers
+  let passengerPickupAddressLine1
+  let passengerPickupAddressLine2
+  let passengerDropoffAddressLine1
+  let passengerDropoffAddressLine2
+  let levelofService
+  let outputElement = document.querySelector ('.rides')
 
     for (let i=0; i<json.length; i++){
       
