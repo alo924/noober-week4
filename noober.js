@@ -8,22 +8,12 @@ async function pageLoaded() {
   // 🔥 start here: write code to loop through the rides
   
   for (let i=0; i<json.length; i++){
-     ride=json[i]
-     
-  let outputElement=document.querySelector('.rides')
-
-  for (let n=0; n<ride.length; n++){
-    passenger1Name = `${ride[n].passengerDetails.first} ${ride[n].passengerDetails.last}`
-    passenger1Phone = ride[n].passengerDetails.phoneNumber
-    passenger1NumberOfPassengers = ride[n].numberOfPassengers
-    passenger1PickupAddressLine1 = ride[n].pickupLocation.address
-    passenger1PickupAddressLine2 = `${ride[n].pickupLocation.city}, ${ride[n].pickupLocation.state} ${ride[n].pickupLocation.zip}`
-    passenger1DropoffAddressLine1 = ride[n].dropoffLocation.address
-    passenger1DropoffAddressLine2 = `${ride[n].dropoffLocation.city}, ${ride[n].dropoffLocation.state} ${ride[n].dropoffLocation.zip}`
-
+  for (n=0; n<json[i].length>1; n++){
     
-    if (ride.length>1) {
+    if (json[i].length>1)  {
+      console.log(json[i][n])
       levelofService = 'Noober Pool'
+      let outputElement=document.querySelector('.rides')
       outputElement.insertAdjacentHTML('beforeend',`
       <h1 class="inline-block mt-8 px-4 py-2 rounded-xl text-2xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
       <i class="fas fa-car-side"></i>
@@ -56,7 +46,8 @@ async function pageLoaded() {
       </div>
     </div>
       `)
-      
+    
+    
       } else if (ride[0].purpleRequested) {
         levelofService = 'Noober Purple'
         outputElement.insertAdjacentHTML('beforeend',`
