@@ -7,13 +7,13 @@ async function pageLoaded() {
   
   // 🔥 start here: write code to loop through the rides
   
-  // for (let i=0; i<json.length; i++){
-     // ride=json[i]
+   for (let i=0; i<json.length; i++){
+      ride=json[i]
   }
 
-    // let outputElement=document.querySelector('.rides')
+     let outputElement=document.querySelector('.rides')
 
-  // for (let n=0; n<ride.length; n++){
+   for (let n=0; n<ride.length; n++){
       passenger=ride[n]
     if (ride.length>1) {
       levelofService = 'Noober Pool'
