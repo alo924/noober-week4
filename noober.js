@@ -18,7 +18,7 @@ async function pageLoaded() {
   let outputElement = document.querySelector ('.rides')
 
     for (let i=0; i<json.length; i++){
-      let ride = json
+      let ride = json[i]
 
       if (json[i].length>1)  {
       levelofService = 'Noober Pool'
