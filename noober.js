@@ -32,25 +32,25 @@ async function pageLoaded() {
     <div class="border-4 border-gray-900 p-4 my-4 text-left">
       <div class="flex">
         <div class="w-1/2">
-          <h2 class="text-2xl py-1">Foghorn Leghorn</h2>
-          <p class="font-bold text-gray-600">(312) 555-1212</p>
+          <h2 class="text-2xl py-1"> ${ride.passengerDetails.first}</h2>
+          <p class="font-bold text-gray-600">${ride.passengerDetails.phoneNumber}</p>
         </div>
         <div class="w-1/2 text-right">
           <span class="rounded-xl bg-gray-600 text-white p-2">
-            2 passengers
+            ${ride.numberOfPassengers}
           </span>
         </div>
       </div>
       <div class="mt-4 flex">
         <div class="w-1/2">
           <div class="text-sm font-bold text-gray-600">PICKUP</div>
-          <p>123 Main St</p>
-          <p>Chicago, IL 60603</p>
+          <p> ${ride.pickupLocation.address}</p>
+          <p> ${ride.pickupLocation.city}, ${ride.pickupLocation.state}, ${ride.pickupLocation.zip} </p>
         </div>
         <div class="w-1/2">
           <div class="text-sm font-bold text-gray-600">DROPOFF</div>
-          <p>123 Main St</p>
-          <p>Chicago, IL 60603</p>
+          <p>${ride.dropoffLocation.address}</p>
+          <p> ${ride.dropoffLocation.city}, ${ride.dropoffLocation.state}, ${ride.pickupLocation.zip} </p>
         </div>
       </div>
     </div>
