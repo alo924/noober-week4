@@ -15,13 +15,13 @@ async function pageLoaded() {
   let passengerDropoffAddressLine1
   let passengerDropoffAddressLine2
   let levelofService
-  let outputElement = document.querySelector ('.rides')
 
     for (let i=0; i<json.length; i++){
       let ride = json[i]
 
       if (json[i].length>1)  {
       levelofService = 'Noober Pool'
+      let outputElement = document.querySelector ('.rides')
       outputElement.insertAdjacentHTML('beforeend',`
       <h1 class="inline-block mt-8 px-4 py-2 rounded-xl text-2xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
       <i class="fas fa-car-side"></i>
@@ -69,6 +69,7 @@ async function pageLoaded() {
 
       } else if (ride[0].purpleRequested) {
         levelofService = 'Noober Purple'
+        let outputElement = document.querySelector ('.rides')
         outputElement.insertAdjacentHTML('beforeend',`
       
         <h1 class="inline-block mt-8 px-4 py-2 rounded-xl text-2xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
@@ -117,6 +118,7 @@ async function pageLoaded() {
   
       } else if (ride[0].numberOfPassengers>3) {
         levelofService = 'Noober XL'
+        let outputElement = document.querySelector ('.rides')
         outputElement.insertAdjacentHTML('beforeend',`
       
         <h1 class="inline-block mt-8 px-4 py-2 rounded-xl text-2xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
@@ -162,7 +164,7 @@ async function pageLoaded() {
           `)
   
       } else levelofService = 'Noober X'
-
+      let outputElement = document.querySelector ('.rides')
       outputElement.insertAdjacentHTML('beforeend',`
 
       <h1 class="inline-block mt-8 px-4 py-2 rounded-xl text-2xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
