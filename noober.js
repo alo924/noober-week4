@@ -7,8 +7,14 @@ async function pageLoaded() {
   
   // 🔥 start here: write code to loop through the rides
   
- for (let i=0; i<json.length; i++){
-  ride=json[i]
+ for (let i=0; i<rides.length; i++){
+   let ride=rides[i]
+
+  for (let j=0; j<ride.length; j++){
+    let element=document.querySelector('.rides')
+    element.insertAdjacentHTML(`beforeend`, renderProduct(ride))
+  }
+   
   }
 
  let outputElement=document.querySelector('.rides')
